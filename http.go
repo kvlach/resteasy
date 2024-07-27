@@ -33,6 +33,38 @@ func GET(url string) *Request {
 	return NewRequest(url).Method("GET")
 }
 
+func HEAD(url string) *Request {
+	return NewRequest(url).Method("HEAD")
+}
+
+func POST(url string) *Request {
+	return NewRequest(url).Method("POST")
+}
+
+func PUT(url string) *Request {
+	return NewRequest(url).Method("PUT")
+}
+
+func DELETE(url string) *Request {
+	return NewRequest(url).Method("DELETE")
+}
+
+func CONNECT(url string) *Request {
+	return NewRequest(url).Method("CONNECT")
+}
+
+func OPTIONS(url string) *Request {
+	return NewRequest(url).Method("OPTIONS")
+}
+
+func TRACE(url string) *Request {
+	return NewRequest(url).Method("TRACE")
+}
+
+func PATCH(url string) *Request {
+	return NewRequest(url).Method("PATCH")
+}
+
 func (r *Request) Method(method string) *Request {
 	r.method = method
 	return r
